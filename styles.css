@@ -161,14 +161,6 @@ summary {
     color: var(--header-text, #272729);
 }
 
-details > summary {
-    list-style-type: '⏵ ';
-}
-
-details[open] > summary {
-    list-style-type: '⏷ ';
-}
-
 nav > ul > li > a {
     position: relative;
 }
