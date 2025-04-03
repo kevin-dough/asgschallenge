@@ -154,8 +154,20 @@ footer {
 }
 
 h1,h2,h3 {
+    opacity: 0;
     font-family: 'Ogg', serif;
     color: var(--header-text, #272729);
+    animation: fadeUp 0.5s ease-in-out forwards;
+}
+
+p {
+    opacity: 0;
+    animation: fadeUp 0.5s ease-in-out forwards;
+}
+
+img {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 summary {
@@ -169,4 +181,24 @@ details > summary {
 
 details[open] > summary {
     list-style-type: '⏷ ';
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
