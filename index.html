@@ -27,6 +27,7 @@
         </nav>
     </header>
     <main>
+        <noscript>Please enable your Javascript!</noscript>
         <section id="hero-section">
             <div id="hero-banner">
                 <h1>Lorem Ipsum</h1>
@@ -89,5 +90,39 @@
             </li>
         </ul>
     </footer>
+    <script>
+        let viewportWidth = window.innerWidth;
+        window.addEventListener('resize', () => {
+            viewportWidth = window.innerWidth;
+            // console.log(`Viewport Width: ${window.innerWidth}px`);
+
+            
+
+            if (viewportWidth < 1420) {
+                document.querySelectorAll(".card").forEach((card) => {
+                    let h3Element = card.children[0];
+                    let detailElement = document.createElement("details");
+                    let summaryElement = document.createElement("summary");
+
+                    summaryElement.textContent = h3Element.textContent;
+                    detailElement.appendChild(summaryElement);
+                    detailElement.appendChild(card.children[1]);
+                    card.replaceWith(detailElement);
+                });
+                document.getElementById("cards-section").style.flexDirection = "column";
+            } else {
+                document.querySelectorAll("details").forEach((detail) => {
+                    let card = document.createElement("div");
+                    card.className = "card";
+                    let h3Element = document.createElement("h3");
+                    h3Element.textContent = detail.children[0].textContent;
+                    card.appendChild(h3Element);
+                    card.appendChild(detail.children[1]);
+                    detail.replaceWith(card);
+                });
+                document.getElementById("cards-section").style.flexDirection = "row";
+            }
+        });
+    </script>
 </body>
 </html>

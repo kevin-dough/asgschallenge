@@ -21,10 +21,11 @@ header {
 
 header, footer {
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: clamp(0.6rem, 0.875vw, 0.875rem);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 2vw;
 
     ul {
         list-style: none;
@@ -32,6 +33,7 @@ header, footer {
         flex-direction: row;
         justify-content: end;
         gap: 3vw;
+        padding-inline-start: 0;
     }
 
     li > a {
@@ -42,8 +44,8 @@ header, footer {
 footer {
     background-color: var(--alt-background, #2B2C2E);
     color: var(--background, #ffffff);
-    
-    
+    /* flex-wrap: wrap; */
+
     padding: 2.7vw 4vw;
 
     li > a {
@@ -57,7 +59,7 @@ footer {
 }
 
 #hero-section {
-    padding: 0 4.5vw 5vw 4.5vw;
+    padding: 0 4.5vw 0 4.5vw;
 }
 
 #hero-banner {
@@ -78,7 +80,7 @@ footer {
 }
 
 .content-section {
-    padding: 2vw 15vw;
+    padding: 7vw 17vw;
 }
 
 #main-text-section {
@@ -91,12 +93,11 @@ footer {
 }
 
 #image-section {
-    margin: 9vw 0;
+    /* margin: 5vw 0; */
     display: flex;
     flex-direction: row;
-    gap: 2rem;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
     img {
         width: 28.5%;
@@ -155,4 +156,17 @@ footer {
 h1,h2,h3 {
     font-family: 'Ogg', serif;
     color: var(--header-text, #272729);
+}
+
+summary {
+    font-family: 'Ogg', serif;
+    color: var(--header-text, #272729);
+}
+
+details > summary {
+    list-style-type: '⏵ ';
+}
+
+details[open] > summary {
+    list-style-type: '⏷ ';
 }
