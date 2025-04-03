@@ -11,6 +11,25 @@
     <link rel="preload" as="image" href="/images/4624b64463348851cc8e8e1f3680a12b.avif" type="image/avif">
     <link rel="preload" as="image" href="/images/fab5beec8dbb6210165160a23b147a5a.avif" type="image/avif">
     <link rel="preload" as="image" href="/images/21ca690a9e83a4a6f93b84970462ed87.avif" type="image/avif">
+
+    <style>
+        #hero-banner {
+            background-image: url('images/21ca690a9e83a4a6f93b84970462ed87.avif');
+            width: 100%;
+            height: 47.5vw;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            h1 {
+                color: var(--background, #ffffff);
+                font-size: clamp(2rem, 4.5vw, 4.5rem);
+                font-weight: 400;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -48,9 +67,9 @@
             </p>
         </section>
         <section id="image-section" class="content-section">
-            <img src="/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif" alt="Placeholder Image">
-            <img src="/images/4624b64463348851cc8e8e1f3680a12b.avif" alt="Placeholder Image">
-            <img src="/images/fab5beec8dbb6210165160a23b147a5a.avif" alt="Placeholder Image">
+            <img src="/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif" alt="Placeholder Image" fetchpriority="high">
+            <img src="/images/4624b64463348851cc8e8e1f3680a12b.avif" alt="Placeholder Image" fetchpriority="high">
+            <img src="/images/fab5beec8dbb6210165160a23b147a5a.avif" alt="Placeholder Image" fetchpriority="high">
         </section>
         <section id="cards-section" class="content-section">
             <div class="card">
