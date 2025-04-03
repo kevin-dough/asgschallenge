@@ -14,7 +14,10 @@
 
     <style>
         #hero-banner {
-            background-image: url('/.netlify/images?url=/images/21ca690a9e83a4a6f93b84970462ed87.avif&w=1600');
+            background-image: image-set(
+                url('/.netlify/images?url=/images/21ca690a9e83a4a6f93b84970462ed87.avif&w=800') 1x,
+                url('/.netlify/images?url=/images/21ca690a9e83a4a6f93b84970462ed87.avif&w=1600') 2x
+            );
             width: 100%;
             height: 47.5vw;
             background-size: cover;
@@ -70,7 +73,13 @@
             <!-- <img src="/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif" alt="Placeholder Image">
             <img src="/images/4624b64463348851cc8e8e1f3680a12b.avif" alt="Placeholder Image">
             <img src="/images/fab5beec8dbb6210165160a23b147a5a.avif" alt="Placeholder Image"> -->
-            <img src="/.netlify/images?url=/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif&w=1000" alt="Placeholder Image">
+            <img
+                src="/.netlify/images?url=/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif&w=1000"
+                srcset="
+                    /.netlify/images?url=/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif&w=200 200w,
+                    /.netlify/images?url=/images/1c596eb08e4a8a278ee1af3f2d7e1d7b.avif&w=1000 1000w"
+                alt="Placeholder Image"
+                sizes="(max-width: 768px) 90vw, 28.5vw">
             <img src="/.netlify/images?url=/images/4624b64463348851cc8e8e1f3680a12b.avif&w=1000" alt="Placeholder Image">
             <img src="/.netlify/images?url=/images/fab5beec8dbb6210165160a23b147a5a.avif&w=1000" alt="Placeholder Image">
         </section>
